@@ -1,6 +1,9 @@
-class Solution {
-public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
         anagram_map = defaultdict(list)
         
         for word in strs:
@@ -8,5 +11,3 @@ public:
             anagram_map[sorted_word].append(word)
         
         return list(anagram_map.values())
-    }
-};
